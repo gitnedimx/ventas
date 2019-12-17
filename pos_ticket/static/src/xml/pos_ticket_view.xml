@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <t t-if="widget.pos.company.name">
-                    <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.name"/></div>
+                    <div style="width:100%;text-align:right;">COPIA DE PRODUCCIÓN</div>
                 </t>
                 <t t-if="widget.pos.company.email">
                     <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.email"/></div>
