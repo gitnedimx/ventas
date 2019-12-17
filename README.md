@@ -1,1 +1,2 @@
-# ventas
+# odoo
+instancia odoo.sh

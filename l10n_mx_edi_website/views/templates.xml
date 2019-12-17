@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="website_cfdi_tokens" name="Website CFDI Download Tokens">
+        <input type="hidden" name="ticket_number" t-att-value="ticket_number"/>
+        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+        <input type="hidden" name="redirect" t-att-value="redirect"/>
+        <input type="hidden" name="token" t-att-value="token"/>
+    </template>
+
+    <template id="website_cfdi" name="Website CFDI Download">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_website_login_container">
+                <div class="container mb64 col-md-12 text-center">
+                    <form action="/CFDI/pdf" id="pdf" method="post" class="oe_login_form">
+                        <t t-call="l10n_mx_edi_website.website_cfdi_tokens"/>
+                    </form>
+                    <form action="/CFDI/xml" id="xml" method="post" class="oe_login_form">
+                        <t t-call="l10n_mx_edi_website.website_cfdi_tokens"/>
+                    </form>
+                    <form t-att-action="action" method="post" class="oe_login_form">
+                        <h3 class="page-header">Customer Invoices</h3>
+                        <t t-if="error">
+                            <h5 class="alert alert-danger" t-esc="error"/>
+                        </t>
+                        <t t-call="l10n_mx_edi_website.website_cfdi_tokens"/>
+                        <t t-if="(invoice or pac_error) and not error">
+                            <t t-if="pac_error">
+                                <h5 class="alert alert-danger" t-esc="pac_error"/>
+                            </t>
+                            <div class="clearfix">
+                                <button type="submit" form="xml" class="btn btn-primary">Download XML</button>
+                                <button type="submit" form="pdf" class="btn btn-primary">Download PDF</button>
+                            </div>
+                        </t>
+                        <t t-if="(partner or error) and not pac_error">
+                            <div class="form-group col-xs-12">
+                                <label class="control-label" for="name">E-mail</label>
+                                <input type="email" required="" t-att-value="email" name="email" placeholder="e.g. john@example.com" class="form-control"/>
+                            </div>
+                            <div t-attf-class="form-group #{vat and 'has-error' or ''} col-xs-12">
+                                <label class="control-label" for="name">VAT</label>
+                                <input type="text" required="" t-att-value="vat" name="vat" placeholder="e.g. ABC123456T1B" class="form-control"/>
+                            </div>
+                            <div class="clearfix">
+                                <button type="submit" class="btn btn-primary">Download</button>
+                            </div>
+                        </t>
+                    </form>
+                    <div class="col-md-12 oe_structure"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="l10n_mx_edi_website.login" inherit_id="auth_signup.fields" name="Sign up - Reset Password">
+        <xpath expr="//div[hasclass('field-name')]" position="after">
+            <div class="form-group field-vat">
+                <label t-att-hidden="'hidden' if only_passwords else None" for="vat" class="control-label">VAT (Optional)</label>
+                <input t-att-hidden="'hidden' if only_passwords else None" type="text" name="vat" t-att-value="vat" id="vat" class="form-control" placeholder="e.g. ABC123456T1B"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
