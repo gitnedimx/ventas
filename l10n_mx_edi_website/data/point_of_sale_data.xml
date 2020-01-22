@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+
+    <record id="seq_picking_type_posout" model="ir.sequence">
+        <field name="name">Picking POS - Download Invoice</field>
+        <field name="prefix">DOWN-INV</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="picking_type_posout" model="stock.picking.type">
+        <field name="name">PoS Orders  Download Invoice</field>
+        <field name="sequence_id" ref="seq_picking_type_posout"/>
+        <field name="default_location_src_id" ref="stock.stock_location_stock"/>
+        <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+        <field name="warehouse_id" ref="stock.warehouse0"/>
+        <field name="code">outgoing</field>
+    </record>
+
+    <record model="pos.config" id="pos_config_download_electronic_invoice">
+        <field name="name">Download Electronic Invoice</field>
+        <field name="picking_type_id" ref="picking_type_posout"/>
+        <field name="barcode_nomenclature_id" ref="barcodes.default_barcode_nomenclature"/>
+        <field name="active">False</field>
+    </record>
+</odoo>

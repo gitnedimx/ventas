@@ -1,0 +1,291 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_mx_edi_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-28 01:23+0000\n"
+"PO-Revision-Date: 2019-02-28 01:23+0000\n"
+"Last-Translator: Luis González <lgonzalez@vauxoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "$ 3.12"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "$ 4.40"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "$ 4.50"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "$ 8.50"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span class=\"pos-change_amount\">$ 0.86</span>"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span class=\"pos-change_title\">Change</span>"
+msgstr "<span class=\"pos-change_title\">Cambio</span>"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span class=\"total-amount-formatting\">TOTAL</span>"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span id=\"total-amount\" class=\"pos_total-amount\">$ 469.14</span>"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span>$ 470.00</span>"
+msgstr ""
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "<span>Cash (USD):</span>"
+msgstr "<span>Efectivo (en USD):</span>"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:212
+#, python-format
+msgid "Created to generate a new order and generate the invoice"
+msgstr "Creado para generar un pedido nuevo y generar la factura"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "Customer Invoices"
+msgstr "Facturas de cliente"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Desk Organizer"
+msgstr "Organizador de Escritorio"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "Download"
+msgstr "Descargar"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "Download PDF"
+msgstr "Descargar PDF"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "Download XML"
+msgstr "Descargar XML"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "E-mail"
+msgstr "Correo electrónico"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:73
+#, python-format
+msgid "Error at the moment to create the invoice. Please try again in few minutes"
+msgstr "Error al crear la factura. Por favor, inténtelo de nuevo en algunos minutos"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:33
+#: code:addons/l10n_mx_edi_website/controllers/main.py:68
+#: code:addons/l10n_mx_edi_website/controllers/main.py:110
+#, python-format
+msgid "Error at the moment to sign the invoice. Please try again in few minutes"
+msgstr "Error al firmar la factura. Por favor, inténtelo de nuevo en algunos minutos"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:52
+#, python-format
+msgid "Fill all values on the form"
+msgstr "Complete todos los campos en el formulario"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:170
+#, python-format
+msgid "If you have not received this mail probably it is %s"
+msgstr "Si no ha recibido este correo, probablemente es %s"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:57
+#, python-format
+msgid "Invalid vat. The format expected is ABC123456T1B."
+msgstr "RFC incorrecto. El formato esperado es ABC123456T1B."
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Led Lamp"
+msgstr "Lámpara LED"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Monitor Stand"
+msgstr "Soporte de Monitor"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:65
+#, python-format
+msgid "No partner"
+msgstr "Sin cliente"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Odoo Logo"
+msgstr "Logo de Odoo"
+
+#. module: l10n_mx_edi_website
+#: model:account.account.type,name:l10n_mx_edi_website.account_type_other
+msgid "Other"
+msgstr "Otro"
+
+#. module: l10n_mx_edi_website
+#: model:stock.picking.type,name:l10n_mx_edi_website.picking_type_posout
+msgid "PoS Orders  Download Invoice"
+msgstr "Pedidos del punto de venta  Descargar facturas"
+
+#. module: l10n_mx_edi_website
+#: model:ir.model,name:l10n_mx_edi_website.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del Punto de Venta"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Price"
+msgstr "Precio"
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:113
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:178
+#, python-format
+msgid "Required"
+msgstr "Obligatorio"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:121
+#, python-format
+msgid "The VAT in the order is different to the vat filled out by you. Please check it and try again"
+msgstr "El RFC en el pedido es diferente del rellenado por usted. Por favor, revíselo e inténtelo de nuevo"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:114
+#, python-format
+msgid "The order was not found. Please check the code"
+msgstr "No se encontró el pedido. Por favor, revise el código"
+
+#. module: l10n_mx_edi_website
+#: sql_constraint:pos.order:0
+msgid "The ticket number must be unique"
+msgstr "El número de ticket debe ser único"
+
+#. module: l10n_mx_edi_website
+#: model:ir.model.fields,field_description:l10n_mx_edi_website.field_pos_order__l10n_mx_edi_ticket_number
+msgid "Ticket Number"
+msgstr "Número de Ticket"
+
+#. module: l10n_mx_edi_website
+#. openerp-web
+#: code:addons/l10n_mx_edi_website/static/src/xml/pos.xml:6
+#: code:addons/l10n_mx_edi_website/static/src/xml/pos.xml:17
+#, python-format
+msgid "To download your e-invoice please go to:"
+msgstr "Para descargar su factura electrónica, por favor visite:"
+
+#. module: l10n_mx_edi_website
+#: model:ir.model.fields,help:l10n_mx_edi_website.field_pos_order__l10n_mx_edi_ticket_number
+msgid "Unique number used to identify and download this ticket in our site"
+msgstr "Número único utilizado para identificar y descargar este ticket en nuestro sitio"
+
+#. module: l10n_mx_edi_website
+#: model:ir.model,name:l10n_mx_edi_website.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "VAT"
+msgstr "RFC"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.login
+msgid "VAT (Optional)"
+msgstr "RFC (Opcional)"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/controllers/main.py:168
+#, python-format
+msgid "We sent you an email to complete the registry."
+msgstr "Le enviamos un correo electrónico para completar el registro."
+
+#. module: l10n_mx_edi_website
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_download_electronic_invoice
+#: model_terms:pos.config,customer_facing_display_html:l10n_mx_edi_website.pos_config_main_demo
+msgid "Whiteboard Pen"
+msgstr "Pluma de Pizarra"
+
+#. module: l10n_mx_edi_website
+#: code:addons/l10n_mx_edi_website/models/point_of_sale.py:179
+#, python-format
+msgid "You are not registered, VAT is required"
+msgstr "No está registrado, el RFC es obligatorio"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.login
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "e.g. ABC123456T1B"
+msgstr "ej. ABC123456T1B"
+
+#. module: l10n_mx_edi_website
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_website.website_cfdi
+msgid "e.g. john@example.com"
+msgstr "ej. john@example.com"
+
+#. module: l10n_mx_edi_website
+#. openerp-web
+#: code:addons/l10n_mx_edi_website/static/src/xml/pos.xml:10
+#: code:addons/l10n_mx_edi_website/static/src/xml/pos.xml:21
+#, python-format
+msgid "or scan this code:"
+msgstr "o escanee este código:"
+

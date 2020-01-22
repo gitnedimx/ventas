@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_account_journal_form_inh_l10n_mx_pos">
+        <field name="name">view.account.journal.form.inh.l10n.mx.pos</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+        <data>
+            <xpath expr="//group[@name='amount_authorized']" position="after">
+                <group>
+                    <field name="l10n_mx_edi_payment_method_id"/>
+                </group>
+            </xpath>
+        </data>
+        </field>
+    </record>
+
+</odoo>

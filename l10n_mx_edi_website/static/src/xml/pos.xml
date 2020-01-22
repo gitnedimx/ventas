@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="l10n_mx_pos_ticket_number" inherit_id="point_of_sale.template">
+    <t t-extend="PosTicket">
+        <t t-jquery=".receipt-change" t-operation="after">
+            <t t-set="url" t-value="order.current_location"/>
+            <p>To download your e-invoice please go to:</p>
+            <div style="word-break: break-word;">
+                <p t-esc="url + '/CFDI/' + order.ticket_number"/>
+            </div>
+            <p>or scan this code:</p>
+            <img t-att-src="'/report/barcode/?type=QR&amp;value='+ url + '/CFDI/' + order.ticket_number + '&amp;width=200&amp;height=200'"/>
+        </t>
+    </t>
+    <t t-extend="XmlReceipt">
+        <t t-jquery=".after-footer" t-operation="after">
+            <t t-set="url" t-value="order.current_location"/>
+            <p>To download your e-invoice please go to:</p>
+            <div style="word-break: break-word;">
+                <p t-esc="url + '/CFDI/' + order.l10n_mx_edi_ticket_number"/>
+            </div>
+            <p>or scan this code:</p>
+            <img t-att-src="'/report/barcode/?type=QR&amp;value='+ url + '/CFDI/' + order.l10n_mx_edi_ticket_number + '&amp;width=200&amp;height=200'"/>
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_pos_session_inherit_form_l10n_mx_edi">
+        <field name="name">view.pos.session.inherit.form.l10n_mx_edi</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//button[@name="action_pos_session_closing_control"]' position="after">
+                <button name="l10n_mx_edi_cancel" type="object" string="Cancel XMLs"
+                    class="oe_highlight" attrs="{'invisible': ['|', ('state', '!=', 'closed'), ('l10n_mx_edi_pac_status', '=', 'cancelled')]}"/>
+            </xpath>
+            <xpath expr='//field[@name="stop_at"]' position="after">
+                <label for="l10n_mx_edi_pac_status" states="closed"/>
+                <div class="o_row">
+                    <field name="l10n_mx_edi_pac_status" states="closed"/>
+                    <button name="l10n_mx_edi_update_pac_status" string="Retry" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible':[('l10n_mx_edi_pac_status', 'in', ['signed',False,'cancelled'])]}"/>
+                    <button name="l10n_mx_edi_update_pac_status" string="Re-generate CFDI" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible':[('l10n_mx_edi_pac_status', '!=', 'cancelled')]}"/>
+                </div>
+            </xpath>
+            <xpath expr='//sheet' position="after">
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

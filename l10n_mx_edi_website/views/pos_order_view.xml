@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="pos_order_ticket_number_form">
+        <field name="name">pos.order.ticket.number.form</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <field name="fiscal_position_id" position="after">
+                <field name="l10n_mx_edi_ticket_number"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,6 @@
+Name,Can be Sold?,Can be Purchased?,Product Type,Category,Internal Reference,Barcode,Sales Price,Cost,Unit of Measure,Purchase Unit of Measure,Weight,Volume,Customer Taxes,Vendor Taxes,Invoicing Policy,Description for Customers,Quantity On Hand,image path/url
+test product 1,,,Stockable Product,All / Saleable / Software,Pro1_int_ref,12,10,5,foot(ft),foot(ft),15,16,"IGST 1%,IGST 2%,IGST 18%",GST 18%,Delivered quantities,desc for customer for test product 1,10,https://cdn0.iconfinder.com/data/icons/website-kit-2/512/icon_55-512.png
+Product 2,,,,All,pro2_int_ref,,20,21,,,25,26,,,,Product 2 desc,,https://www.runscope.com/static/img/public/customer-portrait-uship.png
+Product 3,FALSE,,,,pro3_int_ref,12345,30,31,,,35,36,,,,Product 3 desc,,/home/odoo/Desktop/partner img/2.png
+Product 4,,,Stockable Product,All / Internal,pro4_int_ref,,40,41,,,45,46,IGST 18%,,,Product 4 desc,,/home/odoo/Desktop/partner img/3.png
+Product 5,FALSE,FALSE,,All / Saleable / Physical,pro5_int_ref,,50,51,,,55,56,,,,Product 5 desc,,
