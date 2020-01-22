@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_credit_code_line,access_credit_code_line,model_credit_code_line,base.group_user,1,0,0,0,
+access_admin_credit_code_line,access_admin_credit_code_line,model_credit_code_line,base.user_admin,1,1,1,1
+

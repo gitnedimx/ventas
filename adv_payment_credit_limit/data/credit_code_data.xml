@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Credit Code -->
+        <record model="credit.code" id="credit_code_1">
+            <field name="code">1</field>
+            <field name="name">Credit Hold Rule</field>
+            <field name="description">1 -- Credit Hold (all new sales orders require accounting department approval).</field>
+            <field name="credit_check">credit_hold</field>
+        </record>
+
+        <record model="credit.code" id="credit_code_2">
+            <field name="code">2</field>
+            <field name="name">No limit; check 30 days or more past due</field>
+            <field name="description">2 -- Check for balances 30 days or greater past due if no past due, then no approval needed on any amount -- even if it exceeds credit limit.</field>
+            <field name="credit_check">base_on_rule</field>
+            <field name="credit_limit_enforced" eval="False"/>
+        </record>
+
+        <record model="credit.code" id="credit_code_3">
+            <field name="code">3</field>
+            <field name="name">Check credit limit; and 60 days or more past due</field>
+            <field name="description">3 -- If any balance is 60 days due, then approval required otherwise no approval unless order exceeds credit limit.</field>
+            <field name="credit_check">base_on_rule</field>
+            <field name="credit_limit_enforced" eval="True"/>
+        </record>
+
+        <record model="credit.code" id="credit_code_4">
+            <field name="code">4</field>
+            <field name="name">No limit; check 60 days or more past due</field>
+            <field name="description">4 -- Check for balances 60 days or greater past due if not past due, then no approval needed on any amount -- even if it exceeds credit limit.</field>
+            <field name="credit_check">base_on_rule</field>
+            <field name="credit_limit_enforced" eval="False"/>
+        </record>
+
+        <record model="credit.code" id="credit_code_5">
+            <field name="code">5</field>
+            <field name="name">Check limit; 60 days or more or 30 days past due = 25%</field>
+            <field name="description">5 -- If any amount is 60 days or more then approval needed. If 25% of total credit limit is in 30 days or greater then approval required. Credit limit enforced.</field>
+            <field name="credit_check">base_on_rule</field>
+            <field name="credit_limit_enforced" eval="True"/>
+        </record>
+
+        <record model="credit.code" id="credit_code_6">
+            <field name="code">6</field>
+            <field name="name">No limit; 60 days or more or if 30 days is $500 or more</field>
+            <field name="description">6 -- If any amount is 60 days or more then approval needed. If balance in 30 days is greater than $500 then approval required. If ANY balance is 60 days or greater approval required.  Otherwise credit limit is not checked.</field>
+            <field name="credit_check">base_on_rule</field>
+            <field name="credit_limit_enforced" eval="False"/>
+        </record>
+
+        <record model="credit.code" id="credit_code_7">
+            <field name="code">7</field>
+            <field name="name">Check Limit Rule</field>
+            <field name="description">7 -- Check limit  </field>
+            <field name="credit_check">check_limit</field>
+        </record>
+        
+        <record model="credit.code" id="credit_code_8">
+            <field name="code">8</field>
+            <field name="name">Credit hold</field>
+            <field name="description">8. Credit hold; need new credit app</field>
+            <field name="credit_check">credit_hold</field>
+        </record>
+
+        <record model="credit.code" id="credit_code_9">
+            <field name="code">9</field>
+            <field name="name">Unlimited Account</field>
+            <field name="description">9 -- Unlimited account has no credit restrictions (even if their credit limit is exceeded). </field>
+            <field name="credit_check">unlimited_account</field>
+        </record>
+
+        <!-- Credit code rules -->
+        <record model="credit.code.line" id="credit_code_line_1">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">30</field>
+            <field name="of"></field>
+            <field name="based_on_amount"></field>
+            <field name="operator_based_on"></field>
+            <field name="value">0.0</field>
+            <field name="credit_code_id" ref="credit_code_2"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_2">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">60</field>
+            <field name="of"></field>
+            <field name="based_on_amount"></field>
+            <field name="operator_based_on"></field>
+            <field name="value">0.0</field>
+            <field name="credit_code_id" ref="credit_code_3"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_3">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">60</field>
+            <field name="of"></field>
+            <field name="based_on_amount"></field>
+            <field name="operator_based_on"></field>
+            <field name="value">0.0</field>
+            <field name="credit_code_id" ref="credit_code_4"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_4">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">60</field>
+            <field name="of"></field>
+            <field name="based_on_amount"></field>
+            <field name="operator_based_on"></field>
+            <field name="value">0.0</field>
+            <field name="credit_code_id" ref="credit_code_5"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_5">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">30</field>
+            <field name="of">credit_limit</field>
+            <field name="based_on_amount">percentage</field>
+            <field name="operator_based_on">&lt;=</field>
+            <field name="value">25.00</field>
+            <field name="credit_code_id" ref="credit_code_5"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_6">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">60</field>
+            <field name="of"></field>
+            <field name="based_on_amount"></field>
+            <field name="operator_based_on"></field>
+            <field name="value">0.0</field>
+            <field name="credit_code_id" ref="credit_code_6"/>
+        </record>
+
+        <record model="credit.code.line" id="credit_code_line_7">
+            <field name="check_past">past_due</field>
+            <field name="operator_condition">&gt;=</field>
+            <field name="days">30</field>
+            <field name="of">past_due</field>
+            <field name="based_on_amount">amount</field>
+            <field name="operator_based_on">&gt;</field>
+            <field name="value">500.00</field>
+            <field name="credit_code_id" ref="credit_code_6"/>
+        </record>        
+    </data>
+</odoo>

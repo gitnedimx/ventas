@@ -1,0 +1,293 @@
+<section class="oe_container oe_dark lead">
+    <div class="oe_row">
+        <div class="oe_row oe_spaced">
+            <h2 class="oe_slogan" style="color: #1b394e">Advance Credit Check Rules</h2>
+            <div class="oe_span12" style="font-size: large;">
+                <p>
+                    This application provides functionality to configure advance credit check rules and apply on customer, such as:
+                </p>
+                <p>1) Credit Hold (all new sales orders require accounting department approval).</p>
+                <p>2) Check for balances 30 days or greater past due if no past due, then no approval needed on any amount -- even if it exceeds credit limit.</p>
+                <p>3) If any balance is 60 days due, then approval required otherwise no approval unless order exceeds credit limit.</p>
+                <p>4) Check for balances 60 days or greater past due if not past due, then no approval needed on any amount -- even if it exceeds credit limit.</p>
+                <p>5) If any amount is 60 days or more then approval needed. If 25% of total credit limit is in 30 days or greater then approval required. Credit limit enforced.</p>
+                <p>6) If any amount is 60 days or more then approval needed. If balance in 30 days is greater than $500 then approval required. If ANY balance is 60 days or greater approval required. Otherwise credit limit is not checked.</p>
+                <p>7) Unlimited account has no credit restrictions (even if their credit limit is exceeded).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color: #1b394e">Key Features</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div class="oe_span12" style="font-size: large;">
+            <ul class="list-unstyled">
+                <li><i class="fa fa-check text-primary"></i> Allows to configure advance credit check rules and apply on customer.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Create Credit Code Rules</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Go to Sales -> Configuration -> Sales Orders -> Credit Code Rules
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            <b>Options:</b>
+            <ul class="list-unstyled">
+                <li></i>1) Credit Hold: All new sales orders require accounting department approval.</li>
+                <li></i>2) Check Limit: Check credit limit assign on customer.</li>
+                <li></i>3) Unlimited Account: No credit restrictions (even if their credit limit is exceeded).</li>
+                <li></i>4) Based on Rules: Dynamic rules can be define to check credit limit.</li>
+            </ul>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="confg_credit_code.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Configuration Based on Rule</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Dynamic rules are predefined and one may configure as per business needs.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="based_on_rule.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Here we take an example where Credit code rule states approval is needed if there is any amount which is past due in 60 days or more.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="configure_based_on.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Further enhancing of credit code, here you can also configure past due days with percentage of credit limit and fix value of compare with past due.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="advance_based_on.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Configuration on Customer</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            On customer record, user can assign credit limit and credit code rule.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="confg_customer.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Create Sale Order</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Once sales person will create the quotation and proceed to confirm, system will check credit code rule. As per applied rule system will check the condition, If the condition will satisfy it will allow to create delivery order other wise put the order in 'CC HOLD' stage.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="create_sale_order.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Credit Code Hold</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+             If order goes in hold stage, then an approval of account manager is require. Account manager can approve or reject Credit hold order.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="credit_code_hold.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Credit hold order on Dashboard</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Account manager can view all credit hold orders on his dashboard and update status approve/reject with amount.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="dashboard.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="approve_credit_hold.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Approved Order</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Order can be proceed for delivery order once get the approval from Account manager.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="approved_order.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="approved_order_one.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container"
+    style="font-family: opensanslite; src:('OpenSans-Light.tff')">
+    <div>
+        <h2 class="oe_slogan" style="color: #1b394e">Approval History</h2>
+        <div style="border-bottom: 2px solid #1b394e; width: 20%; margin: 15px auto"></div>
+        <div style="font-family: sans-serif;font-size: 18px;margin-top: 15px;margin-left: 15px; text-align: left;">
+            Approval history will be maintain on sales order.
+        </div>
+        <div style="color: #444; margin-top: 15px;">
+            <div style="margin-top: 15px;margin-left: 15px;">
+                <img src="approval_history.png" style="width: 100%; height: auto">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">Free Support</h2>
+        </div>
+        <div class="oe_span12">
+            <span>1) One month free bug support period will be offered pertaining to any one server used, testing or live.</span><br/>
+            <span>2) If an error appears in our app due to other custom modules installed in your system, we will charge for our efforts to resolve those errors. </span><br/>
+            <span>3) Please note that you are not allowed to distribute or resell this module after purchase. </span><br/>
+            <span>4) This module is tested and working on Odoo vanilla with Ubuntu OS. </span><br/>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan"><a href="https://support.synconics.com/helpdesk/support-1/submit" style="color: #000000 !important;"> Get Help & Support</a></h2>
+        </div>
+        <div class="oe_slogan oe_spaced text-center">
+            <a class="btn btn-success mt8" title="Get Help !" style="background-color: rgb(31, 16, 140); color: rgb(255, 255, 255) !important; position: relative; overflow: hidden;" href="https://support.synconics.com/helpdesk/support-1/submit"><span class="o_ripple" style="height: 61px; width: 61px; top: -12.9688px; left: -8.76562px;"></span> Help & Support </a>&nbsp;&nbsp;
+            <a class="btn btn-success mt8" title="Request New Features now !" style="background-color: rgb(31, 16, 140); color: rgb(255, 255, 255) !important; position: relative; overflow: hidden;" href="http://www.synconics.com/opensource-erp-implementation-odoo-partner-india-gujarat-ahmedabad-expert-company-contact-us/"> Request New Features </a>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_slogan oe_spaced">
+            <span style="font-size: 20px">Checkout Other Apps Developed By Synconics Technologies <a href="https://apps.odoo.com/apps/modules/browse?search=synconics">Click Here</a></span>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12" style="float: none;">
+            <h2 class="oe_slogan"><a href="http://www.synconics.com/" style="color: #000000 !important;"> Our Services</a></h2>
+        </div>
+        <div class="oe_menu" style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-cloudhosting-installation-expert/">Odoo ERP Installation</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-version-legacy-system-migration-upgradation-expert/">Odoo ERP Migration</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-digital-stratagy-legacy-system-transformation-modernisation/">Digital Stratagy</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-module-configuration-setting-expert/">Odoo ERP configuration</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onsite-onpremise-remote-working-monthly-projectwise-dedicated-functional-technical-expert-resources/">Odoo ERP Staffing</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation-system-application-technology-selection/">Digital Technology Selection</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-module-customization-expert/">Odoo ERP Customization</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-remote-functional-training-by-expert-trainers/">Odoo Functional Training</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organisational-digital-transformation-system-application-technology-selection-implementation/">Digital Transformation Implementation</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-new-module-product-development-expert/">Odoo ERP New Module Development</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-onpremise-remote-technical-training-by-expert-trainers/">Odoo ERP Technical Training</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation-legacy-system-application-technology-migration-modernisation/">Legacy Modernization</a>
+            </li>
+
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-integration-e-commerce-payment-gateway-document-management-shipping-accounting/">Odoo ERP Integrations</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/odoo-opensource-erp-expert-support-services/">Odoo ERP Support</a>
+            </li>
+            <li class="oe_flex_li" style="flex: 0 0 30%;text-align: left;">
+                <a href="http://www.synconics.com/organizational-business-process-reengineering-digital-transformation/">Organizational Transformation</a>
+            </li>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <br/><br/>
+            <span style="font-size: 20px;text-align: right;">Do not mention your query in comments. Odoo does not inform us if there is any query sent on comments, with this there might be a delay from our side to respond on your query. So please forward your query on <a href="http://www.synconics.com/opensource-erp-implementation-odoo-partner-india-gujarat-ahmedabad-expert-company-contact-us/">contact@synconics.com</a> for fast response.</span>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <span style="font-size: 20px">For product demo, please generate a ticket and mention your preferred time and date. Please make sure the demo timing you mentioned are as per Indian Standard Time (IST), between 10:30 AM to 7:00 PM (IST), Monday to Friday.</span>
+        </div>
+    </div>
+</section>
