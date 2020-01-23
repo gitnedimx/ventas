@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Credit Hold -->
+    <record id="action_cc_hold_order_dashboard" model="ir.actions.act_window">
+        <field name="name">Credit Hold</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="sale.view_quotation_tree"/>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'dashboard_view': True}</field>
+        <field name="domain">[('state', '=', 'credit_hold')]</field>
+    </record>
+	<record model="ir.ui.view" id="board_my_dash_view_inherit">
+		<field name="name">My Dashboard</field> 
+		<field name="model">board.board</field>
+		<field name="type">form</field>
+		<field name="inherit_id" ref="board.board_my_dash_view"/> 
+		<field name="arch" type="xml"> 
+            <xpath expr="//form/board/column" position="after">
+                <column>
+                    <action string="Credit code hold" name="%(action_cc_hold_order_dashboard)d" view_mode="list" groups="account.group_account_invoice" domain="[['state', 'in', ['credit_hold']]]"/>
+                </column>
+            </xpath>
+		</field> 
+	</record>
+</odoo>

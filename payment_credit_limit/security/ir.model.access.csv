@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_orderline_approval_history,access_orderline_approval_history,model_orderline_approval_history,base.group_user,1,0,0,0
+access_admin_orderline_approval_history,access_admin_orderline_approval_history,model_orderline_approval_history,base.user_admin,1,1,1,1
+access_credit_code,access_credit_code,model_credit_code,base.group_user,1,0,0,0
+access_admin_credit_code,access_admin_credit_code,model_credit_code,base.user_admin,1,1,1,1
