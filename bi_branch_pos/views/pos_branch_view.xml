@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <template id="assets_for_pos_branch" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/branch/static/src/js/pos_extended.js"></script>
+            </xpath>
+        </template>
+
+        <record id="pos_branch_field_session" model="ir.ui.view">
+            <field name="name">POS Session</field>
+            <field name="model">pos.session</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+            <field name="arch" type="xml">
+                <field name="config_id" position="after">
+                        <field name="branch_id" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="inherit_view_pos_branch_config_form" model="ir.ui.view">
+            <field name="name">inherit_bi_pos_branch_config</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='posbox_reference']" position="after">    
+                    <h2>Allowed POS Branches</h2>
+                    <div class="row mt16 o_settings_container" id="allowed_branches">
+                        <div class="col-xs-12 col-md-6 o_setting_box" title="Allowed POS Branches">
+                            <div class="o_setting_right_pane">
+                                <label for="pos_branch_ids" string="Allowed POS Branches"/>
+                                <div class="content-group mt16">
+                                    <field name="pos_branch_ids" nolabel="1" widget="many2many_tags"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pos_sale_order_branch_field">
+            <field name="name">pos.order.view.form</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field string="Branch" name="branch_id" readonly="True"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="pos_account_statement_line_extended" model="ir.ui.view">
+            <field name="name">POS Statement Line</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='statement_ids']/tree/field[@name='amount']" position="after">
+                    <field name="branch_id"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

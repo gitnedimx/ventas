@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="pos_order_branch_manager_rule" model="ir.rule">
+            <field name="name">POS Order Branch Manager</field>
+            <field name="model_id" ref="model_pos_order"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+        </record>
+
+        <record id="pos_order_branch_user_rule" model="ir.rule">
+            <field name="name">POS Order Branch User</field>
+            <field name="model_id" ref="model_pos_order"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user'))]"/>
+        </record>
+
+        <record id="pos_session_branch_manager_rule" model="ir.rule">
+            <field name="name">POS Session Branch Manager</field>
+            <field name="model_id" ref="model_pos_session"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+        </record>
+
+        <record id="point_of_sale_configuration_access" model="ir.rule">
+            <field name="name">Point of sale configuration access for branch</field>
+            <field name="model_id" ref="model_pos_config"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('pos_branch_ids','=',False),('pos_branch_ids','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user'))]"/>
+        </record>
+
+        <record id="point_of_sale_configuration_access_manager" model="ir.rule">
+            <field name="name">Point of sale configuration access for branch manager</field>
+            <field name="model_id" ref="model_pos_config"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user_manager'))]"/>
+        </record>
+
+        <record id="pos_session_branch_user_rule" model="ir.rule">
+            <field name="name">POS Session Branch User</field>
+            <field name="model_id" ref="model_pos_session"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('branch_id','=',False),('branch_id','=',user.branch_id.id)]</field>
+            <field name="groups" eval="[(4, ref('branch.group_branch_user'))]"/>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template_custom_pos_branch_extended" inherit_id="point_of_sale.template" xml:space="preserve">
+    <t t-extend="OrderReceipt">
+        <t t-jquery="[t-esc='receipt.cashier']" t-operation="after">
+            <br/>Branch: <t t-esc="widget.pos.pos_session.branch_id[1]"/>
+        </t>
+    </t> 
+</templates>
